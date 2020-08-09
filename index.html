@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html ng-app="mainapp" ng-controller="maincontroller">
+	<head>
+		<link rel="icon" href="logo.jpg" type="image/gif" sizes="16x16">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<title>TTT assignment</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<div class="inner">
+					<h1>Terribly Tiny Tales</h1>
+					<p>India's most celebrated micro-fiction platform!</p>
+				</div>
+			</header>
+			<div id="item">
+			
+			</div>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+					<section id="intro" class="main">
+					<label><h2>Insert a number</h2></label>
+                    <input type="number" ng-model='num' min="1" max="330" ng-pattern="/^\d+$/" required>
+                    <span ng-show="num.$error.required">It is required.</span><br><br>
+                    <button type="button" ng-disabled='num.$invalid' class="btn btn-primary" ng-click="submit()">submit</button>
+                    </section>
+                    <section id="intro" class="main items" ng-show="flag">
+							
+					
+					<center>
+					<table id="table-wrapper" align="center" style="width: 50%">
+							<thead>
+								<th><b><i>No.</th>
+								<th><b><i>Word</th>
+								<th><b><i>Frequency count</th>
+							</thead>
+							<tbody>
+								<tr ng-repeat='x in data1'>
+									<td>{{ x.no }}</td>
+									<td>{{ x.key }}</td>
+									<td><center>
+									{{ x.value }}
+									<i class="fa fa-arrow-up" style="font-size:20px;color:green"></i>
+									</center>
+									</td>
+							</tbody>
+						</table>
+					</center>
+					</section>
+					<footer id="footer">
+						
+				<ul class="icons">
+							<li><a href="https://www.twitter.com" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.facebook.com" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.instagram.com/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://www.linkedin.com/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://mail.google.com/mail/u/0/#inbox
+" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">Developed by Ansul Kumar</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			
+			<script src="script.js"></script>
+
+	</body>
+</html>
